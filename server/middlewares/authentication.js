@@ -12,7 +12,6 @@ const verificarToken = (req, res, next) => {
 		req.usuario = decode.usuario;
 		next();
 	})
-	
 }
 
 const checkRoleAdmin = (req, res, next) => {
@@ -21,7 +20,7 @@ const checkRoleAdmin = (req, res, next) => {
 		return res.status(400).json({
 			ok: false,
 			err: {
-				message: 'No tiene privilegios para crear usuario'
+				message: 'No tiene privilegios de administrador'
 			}
 		})
 	}
