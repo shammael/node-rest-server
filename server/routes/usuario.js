@@ -1,7 +1,8 @@
 const express = require('express');
 const UsuarioModel = require('../models/usuario');
-const { verificarToken, checkRoleAdmin } = require('../middlewares/authentication')
+const { verificarToken, checkRoleAdmin } = require('../middlewares/authentication');
 const _ = require('underscore');
+
 const bcrypt = require('bcryptjs');
 
 const app = express();
@@ -92,6 +93,7 @@ app.delete('/usuario/:id', [verificarToken, checkRoleAdmin], (req, res) => {
 			usuario: usuarioBorrado
 		})
 	})
-})
+});
+
 
 module.exports = app;
