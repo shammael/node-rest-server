@@ -53,4 +53,4 @@ usuarioSchema.methods.toJSON = function(){
 
 usuarioSchema.plugin(uniqueValidator, {message: '{PATH} no disponible'});
 
-module.exports = mongoose.model('usuarios', usuarioSchema);
+module.exports = mongoose.model('Usuario', usuarioSchema);
